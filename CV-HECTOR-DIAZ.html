@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Héctor Luis Díaz Padilla · Currículum</title>
+  <meta name="description" content="Currículum de Héctor Luis Díaz Padilla, desarrollador full stack. Sistema de Gestión de la Investigación de la UNAH, DICIHT, Angular, Node.js y SQL Server." />
+  <meta name="author" content="Héctor Luis Díaz Padilla" />
+  <meta property="og:title" content="Héctor Luis Díaz Padilla · Desarrollador full stack" />
+  <meta property="og:description" content="Currículum. Sistema de Gestión de la Investigación de la UNAH, DICIHT. Angular, Node.js y SQL Server." />
+  <meta property="og:type" content="profile" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,620;1,9..144,520&family=Outfit:wght@340;420;520;640&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #e8e0d2;
+      --paper-2: #f6f1e7;
+      --ink: #1b1714;
+      --ink-soft: #3d3832;
+      --muted: #6b6258;
+      --line: rgba(27, 23, 20, 0.16);
+      --pine: #1e4f48;
+      --pine-deep: #143832;
+      --clay: #8d3f22;
+      --gold: #a6843d;
+      --shadow: 0 24px 60px rgba(40, 28, 16, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Outfit", sans-serif;
+      font-weight: 420;
+      font-size: 16.5px;
+      line-height: 1.55;
+      background:
+        radial-gradient(1200px 500px at 100% -10%, rgba(166, 132, 61, 0.16), transparent 55%),
+        radial-gradient(900px 420px at -10% 20%, rgba(30, 79, 72, 0.12), transparent 50%),
+        var(--paper);
+    }
+
+    body::before {
+      content: "";
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      opacity: 0.35;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+      mix-blend-mode: multiply;
+    }
+
+    a { color: var(--pine-deep); text-underline-offset: 3px; }
+    a:hover { color: var(--clay); }
+    a:focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; }
+
+    .sheet {
+      width: min(1080px, calc(100% - 8vw));
+      margin: 28px auto 64px;
+      background: var(--paper-2);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .mast {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 28px;
+      padding: 42px 46px 28px;
+      border-bottom: 1px solid var(--line);
+    }
+    .kicker {
+      margin: 0 0 14px;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--clay);
+    }
+    h1 {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      font-weight: 520;
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 0.92;
+      letter-spacing: -0.03em;
+    }
+    h1 em { font-style: italic; font-weight: 520; }
+    .role {
+      margin: 16px 0 0;
+      max-width: 36rem;
+      font-size: 18px;
+      color: var(--ink-soft);
+    }
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 6px;
+      font-size: 15px;
+      border-left: 1px solid var(--line);
+      padding-left: 22px;
+    }
+    .contacts span { color: var(--muted); display: block; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; }
+
+    .profile {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 24px;
+      padding: 32px 46px;
+      border-bottom: 1px solid var(--line);
+    }
+    .idx {
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--pine);
+      margin: 0;
+    }
+    h2 {
+      font-family: "Fraunces", serif;
+      font-weight: 520;
+      font-size: 28px;
+      margin: 4px 0 0;
+      letter-spacing: -0.02em;
+    }
+    .lead { margin: 0; font-size: 17.5px; max-width: 68ch; }
+
+    section { padding: 32px 46px; border-bottom: 1px solid var(--line); }
+    .sec-head { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; margin-bottom: 18px; }
+    .sec-head p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .job {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 22px;
+    }
+    .when { margin: 0; color: var(--muted); font-size: 14px; }
+    .when strong { display: block; color: var(--ink); font-size: 16px; font-weight: 640; margin-bottom: 4px; }
+    h3 { margin: 0 0 6px; font-size: 20px; font-weight: 640; letter-spacing: -0.02em; }
+    .org { margin: 0 0 10px; color: var(--pine-deep); }
+
+    ul.clean { margin: 10px 0 0; padding: 0; list-style: none; }
+    ul.clean li {
+      position: relative;
+      padding-left: 16px;
+      margin: 7px 0;
+    }
+    ul.clean li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--clay);
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .metric {
+      background: #efe7d8;
+      padding: 14px 14px 12px;
+      border-top: 2px solid var(--pine);
+    }
+    .metric b {
+      display: block;
+      font-family: "Fraunces", serif;
+      font-size: 28px;
+      font-weight: 520;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .metric span { display: block; margin-top: 6px; font-size: 13px; color: var(--ink-soft); }
+    .note { margin: 10px 0 0; font-size: 13px; color: var(--muted); }
+    .url-line { overflow-wrap: anywhere; }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .chip {
+      border: 1px solid var(--line);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 13.5px;
+      background: #fffdf8;
+    }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .card {
+      background: #fffdf8;
+      border: 1px solid var(--line);
+      padding: 16px 16px 14px;
+    }
+    .card h3 { font-size: 17px; }
+    .card p { margin: 0; color: var(--ink-soft); font-size: 15px; }
+
+    .stack {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .stack article { border-top: 1px solid var(--ink); padding-top: 10px; }
+    .stack h3 { font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--clay); }
+    .stack p { margin: 0; }
+
+    .links { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 28px; }
+    .links a { display: block; padding: 6px 0; border-bottom: 1px solid var(--line); text-decoration: none; }
+    .links a small { display: block; color: var(--muted); font-size: 12px; }
+
+    footer.colophon {
+      padding: 22px 46px 20px;
+      background: #071018;
+      color: #d9cbb0;
+      font-size: 13px;
+      display: block;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+    .brand-row img {
+      display: block;
+      height: 62px;
+      width: auto;
+      object-fit: contain;
+    }
+    .brand-row .ues { height: 86px; }
+    .brand-row .sgi { height: 58px; }
+    .brand-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(215, 177, 90, 0.35);
+    }
+
+    @media screen and (max-width: 860px) {
+      .mast, .profile, .job, .metrics, .grid-2, .stack, .links { grid-template-columns: 1fr; }
+      .contacts { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 16px; }
+      .mast, .profile, section, footer.colophon { padding-left: 20px; padding-right: 20px; }
+      .brand-row { flex-wrap: wrap; justify-content: center; }
+      .brand-row img { height: 48px; }
+      .brand-row .ues { height: 68px; }
+      .brand-row .sgi { height: 46px; }
+      h1 { font-size: 40px; }
+    }
+
+    @media print {
+      html, body {
+        background: #f6f1e7 !important;
+        margin: 0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      body::before { display: none !important; }
+      .sheet {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        box-shadow: none;
+        border: 0;
+        background: #f6f1e7;
+      }
+      a { color: inherit; text-decoration: none; }
+      section, .card, .metric, footer.colophon { break-inside: avoid; }
+      .mast { padding-top: 18px; }
+      footer.colophon, .brand-row, .sheet, body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    @page { size: A4; margin: 0; }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <header class="mast">
+      <div>
+        <p class="kicker">Desarrollador full stack · Honduras</p>
+        <h1>Héctor Luis <em>Díaz</em> Padilla</h1>
+        <p class="role">Construyo sistemas web institucionales de punta a punta: interfaz, API, datos, seguridad y el momento en que el sistema sale a producción y la gente lo usa.</p>
+      </div>
+      <div class="contacts">
+        <div><span>Teléfono</span><a href="tel:+50431748220">+504 3174-8220</a></div>
+        <div><span>Correo</span><a href="mailto:diazhector054@gmail.com">diazhector054@gmail.com</a></div>
+        <div><span>Correo institucional</span><a href="mailto:hldiazp@unah.hn">hldiazp@unah.hn</a></div>
+        <div><span>LinkedIn</span><a href="https://www.linkedin.com/in/hector-padilla-4a7625164">linkedin.com/in/hector-padilla</a></div>
+        <div><span>GitHub</span><a href="https://github.com/Totor054">github.com/Totor054</a></div>
+        <div><span>GitLab</span><a href="https://gitlab.com/Totor054">gitlab.com/Totor054</a></div>
+        <div><span>Sistema</span><a href="https://sgi.unah.edu.hn">sgi.unah.edu.hn</a></div>
+        <div><span>Formación</span>UNAH · 4.º año (desde 2020)</div>
+      </div>
+    </header>
+
+    <div class="profile">
+      <div>
+        <p class="idx">01</p>
+        <h2>Perfil</h2>
+      </div>
+      <p class="lead">Desarrollador full stack y estudiante universitario de cuarto año en la Universidad Nacional Autónoma de Honduras (desde 2020). Desde el <strong>12 de febrero de 2025</strong> integro el equipo de desarrollo del Sistema de Gestión de la Investigación (SGI) de la Dirección de Investigación Científica, Humanística y Tecnológica (DICIHT): evolución de módulos, calidad de flujos, soporte a operación y estabilización de la versión en producción en <a href="https://sgi.unah.edu.hn">sgi.unah.edu.hn</a>. Trabajo con Angular 18, TypeScript, Node.js, Express y Microsoft SQL Server. Uso <strong>GitHub</strong> y <strong>GitLab</strong> en el día a día (ramas, merge requests / pull requests y entrega colaborativa). Además aplico <strong>Python</strong> para análisis de datos y trabajo con <strong>redes neuronales</strong> orientadas a asistentes virtuales. He participado en proyectos de software colaborativos públicos, con trabajo en equipo multidisciplinario.</p>
+    </div>
+
+    <section>
+      <div class="sec-head">
+        <div>
+          <p class="idx">02 · Experiencia</p>
+          <h2>DICIHT, UNAH</h2>
+        </div>
+        <p>12 de febrero de 2025 – actualidad</p>
+      </div>
+      <div class="job">
+        <p class="when"><strong>Desarrollador full stack</strong>Dirección de Investigación Científica, Humanística y Tecnológica<br>Universidad Nacional Autónoma de Honduras</p>
+        <div>
+          <h3>Sistema de Gestión de la Investigación (SGI)</h3>
+          <p class="org">Integrante del equipo de desarrollo del SGI — plataforma institucional tipo CRIS en producción nacional.</p>
+          <ul class="clean">
+            <li>Desarrollo frontend y backend del SGI (línea SGI-V1.0.0): interfaces en <strong>Angular 18.2</strong> y <strong>TypeScript 5.5</strong>, APIs REST en <strong>Node.js</strong> con <strong>Express 4.21</strong>, y persistencia en <strong>Microsoft SQL Server</strong> mediante el controlador <strong>mssql 11</strong> y procedimientos almacenados.</li>
+            <li>Participación en la evolución de módulos institucionales de investigación: formularios, validaciones, dashboards, convocatorias, publicaciones y recorridos operativos del investigador y del gestor.</li>
+            <li>Trabajo sobre un sistema ya en uso: corrección de incidencias, mejora continua de flujos críticos (carga, vacío, error, roles y sesiones) y coherencia entre interfaz y API.</li>
+            <li>Apoyo en componentes de seguridad y operación: autenticación con <strong>JWT 9</strong>, acceso institucional con <strong>Azure AD (MSAL Angular 6 / MSAL Browser 5)</strong>, hash de contraseñas con <strong>bcrypt 6</strong>, control de sesiones y validación de entradas y archivos.</li>
+            <li>Integraciones de soporte al producto: correo con <strong>Nodemailer 9</strong>, notificaciones con <strong>Firebase Admin 12</strong>, generación y manejo de documentos (PDF/Excel) y resguardo de archivos en entornos separados de desarrollo, pruebas y producción.</li>
+            <li>Colaboración con control de versiones en <strong>GitLab</strong> y <strong>GitHub</strong>: ramas, revisiones, merge/pull requests y entrega alineada a la arquitectura del monorepo institucional.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="metrics" style="margin-top:22px">
+        <div class="metric"><b>1,637</b><span>Investigadores registrados</span></div>
+        <div class="metric"><b>1,228</b><span>Proyectos en la plataforma</span></div>
+        <div class="metric"><b>1,146</b><span>Usuarios activos</span></div>
+        <div class="metric"><b>113</b><span>Certificados con validación QR</span></div>
+      </div>
+      <p class="note">Indicadores institucionales del SGI presentados en COMPDES 2026. El sistema redujo tiempos de registro, revisión, constancias y reportes: varios procesos pasaron de semanas a unos días, y la verificación de certificados quedó inmediata. La cobertura descrita incluye facultades, campus, institutos, observatorios y grupos de investigación.</p>
+
+      <div class="chips" aria-label="Módulos del SGI">
+        <span class="chip">Censo de investigadores</span>
+        <span class="chip">Perfil de autoservicio</span>
+        <span class="chip">Gestión de proyectos</span>
+        <span class="chip">Becas</span>
+        <span class="chip">Congresos y constancias</span>
+        <span class="chip">Validador QR</span>
+        <span class="chip">Producción científica</span>
+        <span class="chip">Catálogo digital</span>
+        <span class="chip">Portal público de CTI</span>
+        <span class="chip">Solicitudes y notificaciones</span>
+        <span class="chip">Archivos y repositorio</span>
+        <span class="chip">Soporte y mantenimiento</span>
+      </div>
+      <div class="chips" aria-label="Tecnologías principales" style="margin-top:10px">
+        <span class="chip">Angular 18.2</span>
+        <span class="chip">TypeScript 5.5 / 5.8</span>
+        <span class="chip">React 19 / 18.2</span>
+        <span class="chip">Next.js 15.2</span>
+        <span class="chip">Express 4.21</span>
+        <span class="chip">SQL Server</span>
+        <span class="chip">JWT 9</span>
+        <span class="chip">Azure AD</span>
+        <span class="chip">Firebase Admin 12.7</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head">
+        <div>
+          <p class="idx">03 · Proyectos colaborativos</p>
+          <h2>Desarrollo en equipo</h2>
+        </div>
+        <p>Participación general · enlaces públicos</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <h3>Movu</h3>
+          <p class="note" style="margin:0 0 8px">13 de marzo de 2025 – 24 de abril de 2025</p>
+          <p>Plataforma colaborativa de movilidad desarrollada en equipo. Participación en flujos de registro y autenticación, recuperación de acceso por correo y módulos de consulta de viajes y calificaciones. Stack del proyecto: <strong>Next.js 15.2</strong>, <strong>React 19</strong>, <strong>TypeScript 5.8</strong>, <strong>Clerk 6.14</strong> y <strong>Nodemailer 6.10</strong>.</p>
+          <p style="margin-top:10px"><a href="https://github.com/AlbertoRG153/movu">github.com/AlbertoRG153/movu</a> · <a href="https://movu.vercel.app">movu.vercel.app</a></p>
+        </article>
+        <article class="card">
+          <h3>Ingeniería del Software · Frontend</h3>
+          <p class="note" style="margin:0 0 8px">27 de junio de 2024 – 21 de agosto de 2024</p>
+          <p>Sistema académico colaborativo orientado a la gestión departamental. Participación en módulos de interfaz para jefatura de departamento, formularios, filtros y validaciones de flujos académicos. Stack del proyecto: <strong>React 18.2</strong>, <strong>Vite 5.2</strong> y <strong>React Router 6.24</strong>.</p>
+          <p style="margin-top:10px"><a href="https://github.com/FranciscoBaltodano/Proyecto_Ingenieria_Del_Software_Frontend">Ver repositorio en GitHub</a></p>
+        </article>
+        <article class="card">
+          <h3>MacizoEats</h3>
+          <p class="note" style="margin:0 0 8px">16 de julio de 2022 – 18 de agosto de 2022</p>
+          <p>Proyecto colaborativo de aplicación web. Participación en la interfaz de acceso y en la integración de cambios al tronco del repositorio. Stack del proyecto: <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong> y <strong>Express 4.16</strong>.</p>
+          <p style="margin-top:10px"><a href="https://github.com/andres15mol/MacizoEats">github.com/andres15mol/MacizoEats</a></p>
+        </article>
+        <article class="card">
+          <h3>Forma de trabajo</h3>
+          <p>En todos los casos el trabajo fue colaborativo: se entiende el proceso antes de implementar, se respeta la arquitectura del repositorio, se prueba el flujo completo y se entrega el cambio en un estado mantenible para el resto del equipo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head">
+        <div>
+          <p class="idx">04 · Divulgación</p>
+          <h2>Congreso y producto institucional</h2>
+        </div>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <h3>COMPDES 2026 · El Salvador</h3>
+          <p>El SGI-UNAH fue presentado en el XIX Congreso Iberoamericano de Computación para el Desarrollo, Universidad de El Salvador, San Salvador, del 22 al 24 de julio de 2026. Como desarrollador del sistema en producción desde febrero de 2025, formo parte del equipo técnico cuyo trabajo sustentó esa ponencia sobre arquitectura, operación e impacto institucional.</p>
+        </article>
+        <article class="card">
+          <h3>Sistema en producción</h3>
+          <p>Plataforma oficial de gestión de la investigación de la UNAH, con cobertura en facultades, campus e instancias de investigación. Acceso público: <a href="https://sgi.unah.edu.hn">sgi.unah.edu.hn</a>.</p>
+        </article>
+        <article class="card">
+          <h3>Presentación COMPDES 2026</h3>
+          <p>Material de la ponencia del SGI-UNAH disponible en línea para consulta técnica y académica.</p>
+          <p style="margin-top:10px"><a href="https://leonel59.github.io/presentacion-compdes-2026/">Ver presentación interactiva</a></p>
+        </article>
+        <article class="card">
+          <h3>Portal de investigación</h3>
+          <p>Cara pública de la investigación institucional: temas, proyectos y aporte a los Objetivos de Desarrollo Sostenible.</p>
+          <p style="margin-top:10px"><a href="https://leonel59.github.io/PortalInvestigaci-nSGI/">Portal de investigación UNAH</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head">
+        <div>
+          <p class="idx">05 · Herramientas</p>
+          <h2>Stack tecnológico</h2>
+        </div>
+        <p>Tecnologías y versiones que utilizo</p>
+      </div>
+      <div class="stack">
+        <article>
+          <h3>Lenguajes</h3>
+          <p>TypeScript 5.5–5.8, JavaScript (ES moderno), Python, SQL (T-SQL), HTML5 y CSS3.</p>
+        </article>
+        <article>
+          <h3>Frontend</h3>
+          <p>Angular 18.2, Angular Material 18.2, PrimeNG 17.18, RxJS 7.8, Chart.js 4.5, Capacitor 6.1, MSAL Angular 6.0, Next.js 15.2, React 19 / React 18.2, Vite 5.2, React Router 6.24.</p>
+        </article>
+        <article>
+          <h3>Backend</h3>
+          <p>Node.js, Express 4.21 / 4.16, JWT 9.0, bcrypt 6.0, express-validator, express-rate-limit 7.4, Nodemailer 9.1 / 6.10, Multer 1.4, Firebase Admin 12.7, Clerk 6.14.</p>
+        </article>
+        <article>
+          <h3>Datos y análisis</h3>
+          <p>Microsoft SQL Server con mssql 11.0, procedimientos almacenados, modelado relacional. Python para análisis de datos, procesamiento de información y apoyo a decisiones.</p>
+        </article>
+        <article>
+          <h3>IA y asistentes</h3>
+          <p>Trabajo con redes neuronales y asistentes virtuales: diseño de flujos conversacionales, integración con APIs y apoyo a automatización de atención o consulta.</p>
+        </article>
+        <article>
+          <h3>Nube e identidad</h3>
+          <p>Azure AD (MSAL Browser 5.18 / MSAL Angular 6.0), Firebase / web push, almacenamiento de archivos y separación de entornos.</p>
+        </article>
+        <article>
+          <h3>Entrega</h3>
+          <p>Git con <strong>GitHub</strong> y <strong>GitLab</strong> (ramas, pull/merge requests, revisiones). Trabajo colaborativo e integración al tronco del proyecto en ambos entornos.</p>
+        </article>
+        <article>
+          <h3>Producto</h3>
+          <p>Evolución de módulos existentes, usabilidad, documentación operativa y mantenimiento posterior al despliegue.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head">
+        <div>
+          <p class="idx">06 · Formación</p>
+          <h2>Estudios</h2>
+        </div>
+      </div>
+      <div class="job">
+        <p class="when"><strong>Estudiante universitario</strong>2020 – actualidad<br>4.º año</p>
+        <div>
+          <h3>Universidad Nacional Autónoma de Honduras</h3>
+          <p class="org">Formación de pregrado en curso, aplicada en la práctica profesional dentro de la DICIHT desde el 12 de febrero de 2025.</p>
+          <p>La práctica se concentra en desarrollo de software institucional: del módulo a la operación en producción, con usuarios reales de la universidad.</p>
+          <p class="note">Completar en la versión Word el nombre exacto de la carrera, si se requiere para trámites formales.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head">
+        <div>
+          <p class="idx">07 · Evidencias</p>
+          <h2>Enlaces públicos</h2>
+        </div>
+      </div>
+      <div class="links">
+        <a href="https://sgi.unah.edu.hn">sgi.unah.edu.hn<small>Sistema en producción · SGI-UNAH</small></a>
+        <a href="https://www.linkedin.com/in/hector-padilla-4a7625164">LinkedIn<small>hector-padilla-4a7625164</small></a>
+        <a href="https://github.com/Totor054">GitHub · Totor054<small>Perfil y colaboraciones</small></a>
+        <a href="https://gitlab.com/Totor054">GitLab · Totor054<small>Perfil de desarrollo</small></a>
+        <a href="https://totor054.github.io/Portafolio-Hector-Diaz/">Portafolio<small>Sitio personal · GitHub Pages</small></a>
+        <a href="https://leonel59.github.io/presentacion-compdes-2026/">Presentación COMPDES 2026<small>Ponencia del SGI-UNAH en El Salvador</small></a>
+        <a href="https://leonel59.github.io/PortalInvestigaci-nSGI/">Portal de investigación UNAH<small>Temas, proyectos y ODS</small></a>
+        <a href="https://github.com/AlbertoRG153/movu">Movu<small>Proyecto colaborativo · 13 mar 2025 – 24 abr 2025</small></a>
+        <a href="https://movu.vercel.app">movu.vercel.app<small>Demostración pública</small></a>
+        <a href="https://github.com/FranciscoBaltodano/Proyecto_Ingenieria_Del_Software_Frontend">IS Frontend<small>Proyecto colaborativo · 27 jun 2024 – 21 ago 2024</small></a>
+        <a href="https://github.com/andres15mol/MacizoEats">MacizoEats<small>Proyecto colaborativo · 16 jul 2022 – 18 ago 2022</small></a>
+      </div>
+    </section>
+
+    <footer class="colophon">
+      <div class="brand-row">
+        <img src="portada/unah.png" alt="Universidad Nacional Autónoma de Honduras" />
+        <img src="portada/diciht.png" alt="Vicerrectoría Académica y DICIHT" />
+        <img src="portada/ues.png" class="ues" alt="Universidad de El Salvador" />
+        <img src="portada/sgi.webp" class="sgi" alt="Sistema de Gestión de la Investigación" />
+      </div>
+      <div class="brand-meta">
+        <span>Héctor Luis Díaz Padilla</span>
+        <span>Currículum para uso general · 2026</span>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
